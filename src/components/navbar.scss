@@ -1,0 +1,76 @@
+.navbar {
+    background-color: var(--main-color); 
+    color: black; //text colour within the nav
+    font-size: 14px;
+    width: 100%;
+    position: fixed; //fixed navbar
+    top: 0;
+    z-index: 999; //no elements will show over the navbar
+    //background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+
+    .container {
+        padding: 0px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 100px;
+                margin-right: 30px;
+            }
+
+            span{
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+
+            .navIcons{
+                margin: 0px 20px;
+                cursor: pointer;
+            }
+
+            //profile picture
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 5px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
+            //My dropdown options styled - display none on default            
+            .profile {
+                .options{
+                    display: none;
+                    background-color: var(--main-color);
+                    border-radius: 3px;
+                }
+
+                span{
+                    padding: 10px;
+                    cursor: pointer;
+                }
+
+                //Upon hover then display items in dropdown 
+                &:hover{
+                    .options{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+
+    }
+}

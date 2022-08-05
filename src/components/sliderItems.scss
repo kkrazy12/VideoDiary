@@ -1,0 +1,71 @@
+.sliderItems{
+    width: 225px;
+    height: 120px;
+    background-color: var(--main-color);
+    margin-right: 5px;
+    overflow: hidden;
+    cursor: pointer;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    video{
+        width: 200px;
+        height: 140px; //matching the image size
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+//and hover 
+    &:hover{
+        width: 325px;
+        height: 300px;
+        -webkit-box-shadow: 1px 2px 14px 1px rgba(0,0,0,0.68); //box shadow generator online 
+        box-shadow: 1px 2px 14px 1px rgba(0,0,0,0.68);
+        border-radius: 5px;
+
+        //our image within the hover state
+        img{
+            height: 140px;
+        }
+
+        //video info when hovering 
+        .itemInfo{
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+
+            .icons{
+                display: flex;
+                margin-bottom: 10px;
+
+                .icon{
+                    
+                    padding: 5px;
+                    
+                    margin-right: 10px;
+                    font-size: 25px;
+                }
+            }
+
+            .itemInfoTop{ //length and date of video 
+                display: flex;
+                align-items: center;
+                margin-bottom: 7px;
+                font-size: 16px;
+                font-weight: 600;
+                color: rgb(74, 72, 72);
+            }
+
+            .description{
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
