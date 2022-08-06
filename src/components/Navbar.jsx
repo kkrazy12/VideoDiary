@@ -1,5 +1,6 @@
 import { Search, Bookmarks, ArrowDropDown} from "@material-ui/icons"
 import "./navbar.scss" 
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
 return (
@@ -8,7 +9,7 @@ return (
     <div className="left">
       
       <img src="https://endlessicons.com/wp-content/uploads/2014/01/mountain-icon-1.png" alt="a simple mountain logo" />
-      <span>My Diary</span>
+      <Link to="/create">My Diary</Link>
       <span>Anxiety Relief</span>
       <span>Motivational</span>
       <span>Meditations</span>
