@@ -1,7 +1,9 @@
+import App from "../form";
+
 const Create = () => {
     return(
      <div className="create">
-        <h2>Add a diary entry</h2>
+        <App/> {/*Importing my app component from form.js*/}
     </div>
     );
 }

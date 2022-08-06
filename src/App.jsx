@@ -5,12 +5,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Create from './components/Create';
 
-
-//  const App = () => {
-//    return <Home/>;
-//    };
-
-
 ///routing to my other pages - instead of having multiple different HTML pages, REACT keeps my main HTML page and injects the content I want into it, rather than me having to create new pages.
    const App = () => {
     return <Router>
