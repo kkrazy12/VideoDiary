@@ -4,9 +4,9 @@ import { useRef } from "react";
 import { firestore } from "./firebase";
 import { doc, addDoc, collection, updateDoc } from "@firebase/firestore";
 
- const App = () => {
-  return <Home/>;
-  };
+//  const App = () => {
+//   return <Home/>;
+//    };
 
 function App() {
   const _add = useRef();
@@ -78,6 +78,8 @@ function App() {
           <button type='submit'>Save</button>
         </form>
     </div>
+
+    
   );
 }
 
