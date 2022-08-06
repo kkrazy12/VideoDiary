@@ -13,7 +13,8 @@
     }
 
     video{
-        width: 200px;
+        width: 100%;
+        //width: 200px;
         height: 140px; //matching the image size
         object-fit: cover;
         position: absolute;
@@ -25,6 +26,8 @@
     &:hover{
         width: 325px;
         height: 300px;
+        position: absolute;
+        top: -150px;
         -webkit-box-shadow: 1px 2px 14px 1px rgba(0,0,0,0.68); //box shadow generator online 
         box-shadow: 1px 2px 14px 1px rgba(0,0,0,0.68);
         border-radius: 5px;

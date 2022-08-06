@@ -37,7 +37,7 @@ const handleClick = (direction) =>{
           />
 
         <div className="container" ref={listRef}>
-          {f}
+          {}
           <SliderItems index={0}/> 
           <SliderItems index={1}/>
           <SliderItems index={2}/>

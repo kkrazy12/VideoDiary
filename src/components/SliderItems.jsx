@@ -9,7 +9,9 @@ const [isHovered, setIsHovered] = useState(false);
   const trailer = "https://youtu.be/vwqQPeeVM1s"; //adding my mp4 here
 
   return (
-    <div className="sliderItems" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+    <div className="sliderItems" 
+    style={{left: isHovered && index * 225 - 50 + index * 2.5}} //index multiplied by item width minus the 50 padding
+    onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
 {/*       
       onMouseEnter={()=> this.setState({setIsHovered: true})}
       onMouseLeave={()=> this.setState({isHovered: false})}  */}
