@@ -1,19 +1,20 @@
 import { InfoOutlined, PlayCircleOutline } from "@material-ui/icons"
 import "./banner.scss"
+import cat from "../img/cat.jpg"
 
 export default function banner() {
   return (
     <div className="banner">
-      <img src="https://images.hdqwalls.com/wallpapers/ellie-the-last-of-us-4k-yl.jpg" alt=""/>
+      <img src={cat} alt=""/>
 
 <div className="info">
-  <img src="https://w7.pngwing.com/pngs/153/490/png-transparent-logo-brand-white-font-design-white-text-logo.png" 
-  alt=""/>
+  <h1>Welcome back</h1>
+  {/* <img src="https://w7.pngwing.com/pngs/153/490/png-transparent-logo-brand-white-font-design-white-text-logo.png" 
+  alt=""/> */}
 <span className="description">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-Quia alias quas tempora deserunt esse saepe iste doloremque optio ex commodi suscipit expedita at odio porro, 
-amet mollitia aliquam sequi delectus?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, natus!
+Ready to take a break? You can watch our latest stress management tip video <br></br>by clicking play below.
+While it may seem like there’s nothing you can do about <br></br> stress, 
+there are steps you can take to relieve the pressure and regain control.
 </span>
 <div className="buttons">
   <button className="play">

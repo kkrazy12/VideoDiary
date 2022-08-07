@@ -1,8 +1,7 @@
 import "./sliderItems.scss";
 import { InfoOutlined, PlayCircleOutline, Add, ThumbDownOutlined, ThumbUpAltOutlined } from "@material-ui/icons"
 import { useState } from "react";
-import spooky from "../img/getting spooky.PNG";
-import vid from "../video/Dunes.mov";
+
 
 export default function SliderItems({index}) {
 const [isHovered, setIsHovered] = useState(false);
@@ -28,7 +27,7 @@ const [isHovered, setIsHovered] = useState(false);
             allowfullscreen>
 
             </iframe>
-            //<img src={spooky} />
+            
              :<img src="https://www.sho.com/site/image-bin/images/0_0_3473616/0_0_3473616_00h_1280x640.jpg" alt="" />
         }
           <div className="itemInfo">
