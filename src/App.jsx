@@ -8,21 +8,20 @@ import Create from './components/Create';
 ///routing to my other pages - instead of having multiple different HTML pages, REACT keeps my main HTML page and injects the content I want into it, rather than me having to create new pages.
    const App = () => {
     return <Router>
-      <Navbar/>
+            <Navbar/>
 
-    <Switch>
-    <Route exact path="/">
-<Home/>
-    </Route>
-      </Switch>
+            <Switch>
+              <Route exact path="/">
+                <Home/>
+              </Route>
+            </Switch>
 
-<Switch>
-      <Route path="/create">
-        <Create/>
-    </Route>
-    </Switch>
-
-    </Router>
+            <Switch>
+              <Route path="/create">
+                <Create/>
+              </Route>
+            </Switch>
+          </Router>
     };
 
 export default App;

@@ -6,7 +6,7 @@ import "../App.jsx";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const home = () => {
+const Home = () => {
 
   const [lists, setLists] = useState([]);
   // const [genre, setGenre] = useState(null);
@@ -15,9 +15,7 @@ const home = () => {
     const getRandomLists = async () => {
       try {
         const res = await axios.get(
-          `lists${type ? "?type=" + type : ""}${
-            genre ? "&genre=" + genre : ""
-          }`,
+          `lists`,
           {
             headers: {
               token:
@@ -31,7 +29,7 @@ const home = () => {
       }
     };
     getRandomLists();
-  }, [type, genre]);
+  });
 
   return (
     <div className="home">
@@ -44,4 +42,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Home
