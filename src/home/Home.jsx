@@ -14,16 +14,9 @@ const Home = () => {
   useEffect(() => {
     const getRandomLists = async () => {
       try {
-        const res = await axios.get(
-          `lists`,
-          {
-            headers: {
-              token:
-              "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken,
-            },
-          }
-        );
-        setLists(res.data);
+        const res = await axios.get(`lists`);        
+        console.log(res);
+        //setLists(res.data);
       } catch (err) {
         console.log(err);
       }

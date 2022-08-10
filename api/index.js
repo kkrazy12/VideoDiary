@@ -28,6 +28,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
 const videoRoute = require("./routes/videos");
+const listRoute = require("./routes/lists");
 
 dotenv.config(); //Using an env file so that our URL is secure 
 
@@ -45,6 +46,7 @@ mongoose
 app.use(express.json());
 
 app.use("/api/videos", videoRoute);
+app.use("/api/lists", listRoute);
 
 app.listen(8800, () => {
   console.log("Backend server is running!");
