@@ -15,8 +15,8 @@ const Home = () => {
     const getRandomLists = async () => {
       try {
         const res = await axios.get(`lists`);        
-        console.log(res);
-        //setLists(res.data);
+        //console.log(res);
+        setLists(res.data);
       } catch (err) {
         console.log(err);
       }

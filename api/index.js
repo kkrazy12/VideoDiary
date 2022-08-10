@@ -29,6 +29,7 @@ const dotenv = require("dotenv");
 
 const videoRoute = require("./routes/videos");
 const listRoute = require("./routes/lists");
+const diaryRoute = require("./routes/diaryEntries");
 
 dotenv.config(); //Using an env file so that our URL is secure 
 
@@ -47,6 +48,7 @@ app.use(express.json());
 
 app.use("/api/videos", videoRoute);
 app.use("/api/lists", listRoute);
+app.use("/api/diaryEntries", diaryRoute);
 
 app.listen(8800, () => {
   console.log("Backend server is running!");

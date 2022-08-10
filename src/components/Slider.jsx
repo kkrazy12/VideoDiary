@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import "./slider.scss";
 import SliderItems from "./SliderItems";
 
-export default function List() {
+export default function List({list}) {
 
 const [isMoved, setIsMoved] = useState(false);//initial state is flase because nothing has been clicked yet
 const [slideNumber, setSlideNumber] = useState(0);
@@ -28,7 +28,7 @@ const handleClick = (direction) =>{
 
   return (
     <div className="list">
-      <span className="listTitle">What would you like to watch or listen to?</span>
+      <span className="listTitle">{list.title}</span>
       <div className="wrapper">
         <ArrowBackIosOutlined 
         className="sliderArrow left" 
@@ -36,18 +36,10 @@ const handleClick = (direction) =>{
         style={{display: !isMoved && "none"}}
           />
 
-        <div className="container" ref={listRef}>
-          {}
-          <SliderItems index={0}/> 
-          <SliderItems index={1}/>
-          <SliderItems index={2}/>
-          <SliderItems index={3}/>
-          <SliderItems index={4}/>
-          <SliderItems index={5}/>
-          <SliderItems index={6}/>
-          <SliderItems index={7}/>
-          <SliderItems index={8}/>
-          <SliderItems index={9}/>
+        <div className="container" ref={listRef}> 
+          {list.content.map((item, index) => (
+            <SliderItems index={index} item={item}/> 
+          ))}
         </div>
         <ArrowForwardIosOutlined className="sliderArrow right" onClick={() => handleClick('right')}/>
       </div>
