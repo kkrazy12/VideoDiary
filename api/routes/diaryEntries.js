@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const DiaryEntry = require("../models/DiaryEntry");
 
-//CREATE - Working
+//CREATE diary entry
 
-router.post("/", async (req, res) => { //removed verify from inbetween / and async
+router.post("/", async (req, res) => { 
     const newDiaryEntry = new DiaryEntry(req.body);
     try {
       const savedEntry = await newDiaryEntry.save();
@@ -13,9 +13,9 @@ router.post("/", async (req, res) => { //removed verify from inbetween / and asy
     }
 });
 
-//UPDATE specific movie
+//UPDATE diary entry
 
-router.put("/:id", async (req, res) => {//removed verify from inbetween / and async
+router.put("/:id", async (req, res) => {
     try {
       const updatedEntry = await DiaryEntry.findByIdAndUpdate(
         req.params.id,
@@ -30,9 +30,9 @@ router.put("/:id", async (req, res) => {//removed verify from inbetween / and as
     }
 });
 
-//DELETE specific movie
+//DELETE diary entry
 
-router.delete("/:id", async (req, res) => { //removed verify from inbetween / and async
+router.delete("/:id", async (req, res) => { 
     try {
       await DiaryEntry.findByIdAndDelete(req.params.id);
       res.status(200).json("The Entry has been deleted...");
@@ -41,9 +41,9 @@ router.delete("/:id", async (req, res) => { //removed verify from inbetween / an
     }
 });
 
-//GET specific movie
+//GET diary entry
 
-router.get("/find/:id", async (req, res) => {//removed verify from inbetween / and async
+router.get("/find/:id", async (req, res) => {
   try {
     const Entry = await DiaryEntry.findById(req.params.id);
     res.status(200).json(Entry);
@@ -52,9 +52,9 @@ router.get("/find/:id", async (req, res) => {//removed verify from inbetween / a
   }
 });
 
-//GET ALL - working
+//GET ALL diary entries
 
-router.get("/", async (req, res) => {//removed verify from inbetween / and async
+router.get("/", async (req, res) => {
     try {
       const Entries = await DiaryEntry.find();
       res.status(200).json(Entries.reverse());

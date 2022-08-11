@@ -34,12 +34,12 @@ export default function SliderItems({index, item}) {
             src={`https://www.youtube.com/embed/`+video.url+`?controls=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1`} 
             title="YouTube video player" 
             
-            controls="0"
+            controls="0" //show no controls when user is hovering on the trailer yt vid
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
 
             </iframe>
-            
+            //If user is not hovering - then show thumbnail img
              :<img src={video.img} alt="" />
         }
           <div className="itemInfo">

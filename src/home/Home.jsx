@@ -28,6 +28,7 @@ const Home = () => {
     <div className="home">
       <Navbar/>
   <Banner/>
+  {/* List of list from mongodb */}
   {lists.map((list) => (
         <List list={list} />
       ))}

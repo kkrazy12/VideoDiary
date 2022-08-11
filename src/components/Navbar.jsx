@@ -9,7 +9,7 @@ return (
     <div className="left">
       
       <a href="/"><img src="https://endlessicons.com/wp-content/uploads/2014/01/mountain-icon-1.png" alt="a simple mountain logo" /></a>
-      <Link class="diaryLinks" to="/create">My Diary</Link>
+      <Link class="diaryLinks" to="/diary">My Diary</Link>
       {/* <Link class="diaryLinks" to="/watch">Watch Now</Link> */}
       <span>Motivational</span>
       <span>Meditations</span>

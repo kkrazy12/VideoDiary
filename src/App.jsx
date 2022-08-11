@@ -1,9 +1,7 @@
 import './app.scss';
 import Home from "./home/Home";
-import "./form.js";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Create from './components/Create';
 import Watch from './components/Watch';
 import DiaryList from './components/diary/diaryItem/Diary';
 //import Diary from './components/diary';
@@ -17,12 +15,6 @@ import DiaryList from './components/diary/diaryItem/Diary';
             <Switch>
               <Route exact path="/"> 
                 <Home/>
-              </Route>
-            </Switch>
-
-            <Switch>
-              <Route path="/create">
-                <Create/>
               </Route>
             </Switch>
 
