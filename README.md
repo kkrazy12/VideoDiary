@@ -11,6 +11,9 @@ To navigate back home you will need to click the logo.
 ## My Notion Link including design work 
 https://pool-isthmus-b65.notion.site/Design-Journal-b87ad886244448fb858c2b539250921b
 
+## Link to my GitHub
+https://github.com/kkrazy12/VideoDiary
+
 ## Tutorials I followed to complete this web app - references
 https://youtu.be/FzWG8jiw4XM
 https://youtu.be/tsNswx0nRKM
