@@ -48,9 +48,10 @@ const handleAdd = async(e)=> {
   return (    
     <>
     <div className="diaryList">
+    <div className="addFormContainer">
       {
-        showForm ? // If show form = true then show form 
-        <div className="">
+        showForm ? // If show form = true then show form  
+        
           <form id="addForm" onSubmit={handleAdd}>
             <label htmlFor="titleAdd">Title: </label>
             {/* //ref tracks current state of 'titleAdd' then saves it in the constant*/}
@@ -64,7 +65,7 @@ const handleAdd = async(e)=> {
             <textarea id="entryAdd" type="text" ref={inputEntryAdd}></textarea> 
             
           </form>
-        </div>
+        
         : null // if show form = false then return null - nothing. 
       }
       {/* Upon click, flip the show form value. If show form = true then show form and change text to cancel. If show form = false then show 'add entry' text in btn instead */}
@@ -74,6 +75,7 @@ const handleAdd = async(e)=> {
         <button form="addForm" type='submit'>Save</button>
         : null
       }
+      </div>
       {diaryItems.map((item, index) => (
             <DiaryEntry index={index} item={item}/> 
           ))}

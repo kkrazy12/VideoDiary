@@ -5,7 +5,7 @@ import SliderItems from "./SliderItems";
 
 export default function List({list}) {
 
-const [isMoved, setIsMoved] = useState(false);//initial state is flase because nothing has been clicked yet
+const [isMoved, setIsMoved] = useState(false);//initial state is false because nothing has been clicked yet
 const [slideNumber, setSlideNumber] = useState(0);
   const listRef = useRef()
 
@@ -31,13 +31,14 @@ const handleClick = (direction) =>{
       <span className="listTitle">{list.title}</span>
       <div className="wrapper">
         <ArrowBackIosOutlined 
+        //If the slider is moved, set the display of the left arrow to none 
         className="sliderArrow left" 
         onClick={() => handleClick('left')} 
-        style={{display: !isMoved && "none"}}
+        style={{display: !isMoved && "none"}} //(if this part is true) && (this part will execute)
           />
-
+    
         <div className="container" ref={listRef}> 
-          {list.content.map((item, index) => (
+          {list.content.map((item, index) => (            
             <SliderItems index={index} item={item}/> 
           ))}
         </div>

@@ -3,6 +3,10 @@
     --main-color: #F7CACD;
 }
 
+a{
+  color: black;
+}
+
 .App {
     text-align: center;
     padding: 100px; //so my form on my main page isn't behind my navbar
@@ -24,5 +28,36 @@
     color: #61dafb;
   }
   
+  //styling my form buttons 
+  button {
+    padding: 10px;
+    background: rgba(0,0,0,.2);
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover { //upon hover of this button
+      background: rgba(0,0,0,.5);
+    }
+    &+button { //and if there is a sibling button ( a btn next to it) then margin left
+      margin-left:10px;
+    }
+  }
 
+  //add styles to my input boxes so the user knows its there
+  input {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    min-width: 400px;
+  }
+
+  //styles for the text box the user puts their diary entry into  
+  textarea {
+    border: 1px solid rgba(0,0,0,.1);
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 50px;
+    max-height: 150px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
   

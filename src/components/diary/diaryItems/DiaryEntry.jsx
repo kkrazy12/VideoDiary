@@ -68,7 +68,7 @@ export default function DiaryEntry({index, item}) {
       }
       
       {/* Upon click, flip the show entry form value (currently set to false)  If show entryform = true then show form and change text to cancel  */}
-        <button type="button" onClick={() => {setEntryForm(!showEntryForm)}}>{showEntryForm ? "Cancel": "Edit"}</button><br/>
+        <button type="button" onClick={() => {setEntryForm(!showEntryForm)}}>{showEntryForm ? "Cancel": "Edit"}</button>
         {
           showEntryForm ?
 

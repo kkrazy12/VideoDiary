@@ -6,6 +6,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 export default function SliderItems({index, item}) {
+  console.log(item)
   const [isHovered, setIsHovered] = useState(false);
   const [video, setVideo] = useState({});
   
@@ -13,6 +14,7 @@ export default function SliderItems({index, item}) {
       const getVideo = async () => {
       try {
         const res = await axios.get("/videos/find/" + item); 
+        console.log(res);
         setVideo(res.data);
       } catch (err) {
         console.log(err);
